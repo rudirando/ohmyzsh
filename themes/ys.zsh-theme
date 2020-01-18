@@ -46,13 +46,18 @@ local exit_code="%(?,,C:%{$fg[red]%}%?%{$reset_color%})"
 #
 # % ys @ ys-mbp in ~/.oh-my-zsh on git:master x [21:47:42] C:0
 # $
+
+# backup path:
+# %{$terminfo[bold]$fg[yellow]%}%~%{$reset_color%}\
+# preprompt_parts+=('%F{blue}% %3~%f')
+
 PROMPT="
 %{$terminfo[bold]$fg[blue]%}#%{$reset_color%} \
-%(#,%{$bg[yellow]%}%{$fg[black]%}%n%{$reset_color%},%{$fg[cyan]%}%n) \
-%{$fg[white]%}@ \
+%(#,%{$bg[yellow]%}%{$fg[black]%}%n%{$reset_color%},%{$fg[cyan]%}%n)\
+%{$fg[white]%}@\
 %{$fg[green]%}%m \
 %{$fg[white]%}in \
-%{$terminfo[bold]$fg[yellow]%}%~%{$reset_color%}\
+%{$terminfo[bold]$fg[yellow]%}%4~%{$reset_color%}\
 ${hg_info}\
 ${git_info}\
  \
